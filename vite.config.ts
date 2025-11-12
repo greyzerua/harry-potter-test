@@ -8,8 +8,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 
+const BASE_PATH =
+  process.env.NODE_ENV === 'production' ? '/harry-potter-explorer/' : '/';
+
 export default defineConfig({
-  base: '/harry-potter-test/',
+  base: BASE_PATH,
   plugins: [react()],
   resolve: {
     alias: {
