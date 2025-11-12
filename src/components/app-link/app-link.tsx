@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 import clsx from 'clsx'
 
-import type { EAppPage } from '../../constants/link-urls'
+import type { AppPage } from '../../constants/link-urls'
 import { APP_LINK_URLS } from '../../constants/link-urls'
 
 import styles from './app-link.module.css'
@@ -19,7 +19,7 @@ const getClassName = ({ className, dataHover, isCurrentPage }: GetClassNameParam
 
 type Props = ComponentProps<'a'> & {
     dataHover?: string;
-    page: EAppPage;
+    page: AppPage;
 };
 
 export const AppLink = ({ className, page, children, dataHover, ...restProps }: Props) => {

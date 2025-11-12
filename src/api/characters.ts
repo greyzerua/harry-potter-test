@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+import { API_BASE_URL } from './config';
+
 export type Character = {
   id: string;
   name: string;
@@ -11,7 +13,6 @@ export type Character = {
 
 const CHARACTERS_LIST_ENDPOINT = '/characters';
 const CHARACTER_DETAILS_ENDPOINT = '/character';
-const API_BASE_URL = 'https://hp-api.onrender.com/api';
 
 const getCharacters = async (): Promise<Character[]> => {
   const { data } = await axios.get<Character[]>(`${API_BASE_URL}${CHARACTERS_LIST_ENDPOINT}`);

@@ -1,11 +1,12 @@
 import axios from 'axios';
 
+import { API_BASE_URL } from './config';
+
 export type Spell = {
   name: string;
   description: string;
 };
 
-const API_BASE_URL = 'https://hp-api.onrender.com/api';
 const SPELLS_ENDPOINT = '/spells';
 
 const getSpells = async (): Promise<Spell[]> => {
