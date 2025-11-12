@@ -11,16 +11,11 @@ body {
   font-size: 16px;
   min-height: 100vh;
   color: var(--text-color);
-  background:
-    radial-gradient(circle at top, rgba(238, 225, 23, 0.08), transparent 55%),
-    radial-gradient(circle at bottom, rgba(14, 26, 64, 0.25), transparent 60%),
-    linear-gradient(160deg, rgba(59, 30, 5, 0.85), rgba(11, 10, 8, 0.95));
+  background: 
+  radial-gradient(circle at top, rgba(238, 225, 23, 0.08), transparent 55%),
+  radial-gradient(circle at bottom, rgba(14, 26, 64, 0.25), transparent 60%),
+  linear-gradient(160deg, rgb(10 6 3 / 85%), rgba(11, 10, 8, 0.95));
   background-color: var(--bg-color);
-}
-
-.root {
-  display: flex;
-  flex-direction: column;
 }
 
 :root {
@@ -78,51 +73,6 @@ h2 {
   text-transform: uppercase;
 }
 
-button {
-  border: 1px solid var(--accent-gold);
-  border-radius: 999px;
-  padding: 10px 26px;
-  font-family: "Cinzel", "Montserrat", serif;
-  font-size: 16px;
-  cursor: pointer;
-  background: linear-gradient(135deg, rgba(198, 166, 100, 0.18), rgba(198, 166, 100, 0.05));
-  color: var(--text-color);
-  text-transform: uppercase;
-  letter-spacing: 1.28px;
-}
-
-button:hover,
-button:focus-visible {
-  background: linear-gradient(135deg, rgba(198, 166, 100, 0.3), rgba(198, 166, 100, 0.12));
-  box-shadow: var(--glow);
-  transform: translateY(-1px);
-}
-
-input {
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  padding-block: unset;
-  background-color: transparent;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  transition: background-color 9999s ease-in-out 0s;
-  caret-color: var(--loginInput);
-  -webkit-text-fill-color: var(--loginInput) !important;
-}
-
-.glass-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 18px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-}
-
 .bold-hover {
   position: relative;
   transition: .2s ease all;
@@ -150,12 +100,6 @@ input:-webkit-autofill:active {
   :root {
     background-color: var(--bg-color);
   }
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
 a {
