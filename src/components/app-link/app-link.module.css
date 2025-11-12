@@ -1,0 +1,9 @@
+.app-link {
+    font-weight: 500;
+    color: var(--primaryWhite);
+    text-decoration: inherit;
+  }
+  
+  .app-link.app-link_active {
+    font-weight: 700;
+  }

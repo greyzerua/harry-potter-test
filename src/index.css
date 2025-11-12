@@ -1,68 +1,118 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf");
 }
 
 body {
-  margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  font-family: "Montserrat";
+  margin: 0;
+  font-size: 16px;
   min-height: 100vh;
 }
 
+.root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primaryWhite: #FFF;
+  --primaryGrey: #656565;
+  --primaryBlack: #111;
+  --lightGrey: #CCC;
+  --darkGrey: #333;
+  --primaryButtonHoverColor: #585858;
+  --secondaryButtonColor: #EF4934;
+  --secondaryButtonHoverColor: #D43824;
+  --secondaryGrey: #E1E1E1;
+  --greyHover: #F1F1F1;
+}
+
+p {
+  color: var(--textColor);
+  margin: 0;
+  font-weight: 400;
+  font-size: 22px;
+}
+
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  margin: 0;
+  line-height: 1;
+}
+
+h2 {
+  color: var(--textColor);
+  margin: 0;
+  line-height: 1;
+  font-weight: 600;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  border: none;
+  padding: .6em 1.2em;
+  font-family: "Montserrat";
   font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  padding: 0;
+  background-color: transparent;
 }
-button:hover {
-  border-color: #646cff;
+
+input {
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  padding-block: unset;
+  background-color: transparent;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 9999s ease-in-out 0s;
+  caret-color: var(--loginInput);
+  -webkit-text-fill-color: var(--loginInput) !important;
+}
+
+.bold-hover {
+  position: relative;
+  transition: .2s ease all;
+}
+
+.bold-hover::before {
+  content: attr(data-hover);
+  font-weight: 700;
+  visibility: hidden;
+}
+
+.bold-hover > span {
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+
+.bold-hover:hover {
+  font-weight: 700;
 }
 
 @media (prefers-color-scheme: light) {
+
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    background-color: var(--primaryWhite);
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }

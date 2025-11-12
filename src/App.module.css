@@ -1,0 +1,15 @@
+.layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    min-height: 100vh;
+    background: #101f34;
+    color: var(--primaryWhite, #ffffff);
+}
+
+.sidebar {
+    background: #0b1a2a;
+}
+
+.content {
+    padding: 32px;
+}
