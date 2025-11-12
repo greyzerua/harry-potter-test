@@ -63,8 +63,22 @@ const CharacterDetails = () => {
           <div className={styles.details}>
             <h1 className={styles.name}>{character.name}</h1>
 
-            <p className={styles.houseLabel}>House</p>
-            <p className={styles.houseValue}>{character.house || 'Unknown'}</p>
+            <dl className={styles.list}>
+              <div className={styles.listRow}>
+                <dt className={styles.label}>House</dt>
+                <dd className={styles.value}>{character.house || 'Unknown'}</dd>
+              </div>
+
+              <div className={styles.listRow}>
+                <dt className={styles.label}>Date of birth</dt>
+                <dd className={styles.value}>{character.dateOfBirth || 'Unknown'}</dd>
+              </div>
+
+              <div className={styles.listRow}>
+                <dt className={styles.label}>Portrayed by</dt>
+                <dd className={styles.value}>{character.actor || 'Unknown'}</dd>
+              </div>
+            </dl>
           </div>
         </div>
       )}

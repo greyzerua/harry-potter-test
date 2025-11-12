@@ -5,6 +5,8 @@ export type Character = {
   name: string;
   house: string;
   image: string;
+  dateOfBirth?: string | null;
+  actor?: string | null;
 };
 
 const CHARACTERS_LIST_ENDPOINT = '/characters';
